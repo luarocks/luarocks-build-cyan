@@ -16,7 +16,10 @@ end
 
 local function build(rockspec, build_dir)
    -- should this just be a raw require? is there a safe luarocks loader for this instead?
-   local tlconfig = require("tlconfig")
+   local pok, tlconfig = pcall(require, "tlconfig")
+   if not pok then
+      tlconfig = nil
+   end
 
    local gen_target = ""
 
