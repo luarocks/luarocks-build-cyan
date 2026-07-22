@@ -15,7 +15,6 @@ local function get_gen_target_from_lua_version()
 end
 
 local function build(rockspec, build_dir)
-   -- should this just be a raw require? is there a safe luarocks loader for this instead?
    local pok, tlconfig = pcall(require, "tlconfig")
    if not pok then
       tlconfig = nil
