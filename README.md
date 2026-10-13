@@ -20,9 +20,3 @@ build = {
    type = "cyan"
 }
 ```
-
-### TODO
-
-* This only installs the compiled `.lua` files and not the source `.tl` files.
-  Installing the `.tl` files alongside the `.lua` files would be useful for
-  providing IDE-autocompletion of libraries.
